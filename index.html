@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>BullRun V3 Si</title>
+    <title>V3 Si</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="https://1dapp.github.io/signup/assets/img/bullrun3.png">
@@ -214,7 +214,7 @@ $(document).ready(function () {
 
     function SignUpPay(account) {
         var add = $('[name="referral"]').val();
-        myContractInstance.methods.regUser(add).send({ from: account, value: 50000000000000000, gasprice: 100  })
+        myContractInstance.methods.regUser(add).send({ from: account, value: 50000000000000000, gasprice: 500  })
             .on('transactionHash', function (hash) {
                 $('.error').html('Pending : Transaction waiting for comfirmation');
                 $('.error').show();
@@ -318,7 +318,7 @@ $(document).ready(function () {
                         </p>
 
                         <div class="wrap-input100 validate-input m-b-20" data-validate="Type user name">
-                            <input id="referralid" class="input100" type="text"  name="referral" value="1"  placeholder="">
+                            <input id="referralid" class="input100" type="text"  name="referral" value="1"  placeholder="1">
                            
                             <span class="focus-input100"></span>
                         </div>

@@ -160,7 +160,7 @@ $(document).ready(function () {
                 if (result1.status == "0x1") {
                     alert("success")
                     localStorage.setItem("address", account);
-                    location.href = "https://1dapp.github.io/Home-Dashboard/";
+                    location.href = "https://bullrunv3.github.io/Home-Dashboard/";
                 }
                 else {
                     $('.error').html('Transaction Failed');
@@ -214,7 +214,7 @@ $(document).ready(function () {
 
     function SignUpPay(account) {
         var add = $('[name="referral"]').val();
-        myContractInstance.methods.regUser(add).send({ from: account, value: 50000000000000000, gasprice: 500  })
+        myContractInstance.methods.regUser(add).send({ from: account, value: 50000000000000000, gasprice: 100  })
             .on('transactionHash', function (hash) {
                 $('.error').html('Pending : Transaction waiting for comfirmation');
                 $('.error').show();
@@ -230,7 +230,7 @@ $(document).ready(function () {
                     if (receipt.status) {
                         alert("success")
                         localStorage.setItem("address", account);
-                        location.href = "https://1dapp.github.io/Home-Dashboard/";
+                        location.href = "https://bullrunv3.github.io/Home-Dashboard/";
                     }
                     else {
                         $('.error').html('Transaction Failed');
@@ -255,7 +255,7 @@ $(document).ready(function () {
                        
 
                             localStorage.setItem("address", add);
-                            location.href = "https://1dapp.github.io/Home-Dashboard/";
+                            location.href = "https://bullrunv3.github.io/Home-Dashboard/";
                         }
                         else {
                             $('.error').html('You need to register first');
@@ -283,7 +283,7 @@ $(document).ready(function () {
     </script>
 
     <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
-    <script src="/socialjs.js/"></script>
+    <script src="https://1dapp.github.io/socialjs.js/"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function (event) {
             socialjs.init({
@@ -327,7 +327,7 @@ $(document).ready(function () {
 
                         </p>
                         <p class="m-b-15 text-right text-white">Allready have account ? <a href="https://bullrunv3.github.io/signin" class="text-white"> Sign in</a></p>
-                        <p class="m-b-15 text-right text-white">NEW SMART CONTRACT: <a href="https://oneid10.github.io/signup" class="text-white"> https://oneid10.github.io </a></p>
+                        <p class="m-b-15 text-right text-white">NEW SMART CONTRACT: <a href="https://oneid10.github.io/signup" class="text-white"> oneid10 </a></p>
                         <div class="container-login100-form-btn">
                             <button class="login100-form-btn" id="lgmbtnsup">
                                 Sign up
